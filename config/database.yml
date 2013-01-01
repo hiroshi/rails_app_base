@@ -15,7 +15,7 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: textarea_development
+  database: app_name_development
   pool: 5
   username:
   password:
@@ -41,7 +41,7 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: textarea_test
+  database: app_name_test
   pool: 5
   username:
   password:
@@ -50,7 +50,7 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: textarea_production
+  database: app_name_production
   pool: 5
-  username: textarea
+  username: app_name
   password:

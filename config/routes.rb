@@ -1,4 +1,4 @@
-Textarea::Application.routes.draw do
+AppName::Application.routes.draw do
   get '/', :to => 'application#root', :as => :root
   get '/auth/:provider/callback', :to => 'sessions#create', :format => false
   # The priority is based upon order of creation:
