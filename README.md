@@ -2,7 +2,7 @@
 
 Replace `YourAppName` and `your_app_name` into `your real app name` in the instruction below.
 
-    git clone https://github.com/hiroshi/rails_app_base.git your_app_name
+    git clone -o rails_app_base https://github.com/hiroshi/rails_app_base.git your_app_name
     cd your_app_name
     find app config config.ru Rakefile -type f | xargs ruby -n -i -e 'puts $_.gsub(/AppName/, "YourAppName").gsub(/app_name/, "your_app_name")'
     rake db:create db:migrate
