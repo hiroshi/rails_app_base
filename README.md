@@ -4,7 +4,8 @@ Replace `YourAppName` and `your_app_name` into `your real app name` in the instr
 
     git clone https://github.com/hiroshi/rails_app_base.git your_app_name
     cd your_app_name
-    find app config config.ru Rakefile -type f | xargs ruby -n -i -e 'puts $_.gsub(/AppName/, "YourAppName").gsub(/appname/, "your_appn_ame")'
+    find app config config.ru Rakefile -type f | xargs ruby -n -i -e 'puts $_.gsub(/AppName/, "YourAppName").gsub(/app_name/, "your_app_name")'
+    rake db:create db:migrate
 
 - Replace secret token in `config/initializers/secret_token.rb` with the value of `rake secret`.
 - Replace README.md with your own README.
