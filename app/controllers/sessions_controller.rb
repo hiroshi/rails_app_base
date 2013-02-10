@@ -11,6 +11,6 @@ class SessionsController < ApplicationController
       end
     end
     session[:user_id] = user.id
-    redirect_to :root
+    redirect_to request.env['omniauth.origin'] || :root
   end
 end
