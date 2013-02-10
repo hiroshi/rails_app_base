@@ -10,7 +10,14 @@ class SessionsController < ApplicationController
         u.credentials << query.new
       end
     end
+    session.clear
     session[:user_id] = user.id
+    p request.env['omniauth.params']
     redirect_to request.env['omniauth.origin'] || :root
+  end
+
+  def destroy
+    session.clear
+    redirect_to :root
   end
 end
